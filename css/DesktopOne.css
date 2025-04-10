@@ -1,0 +1,237 @@
+.desktop-one {
+width: 100%;
+height: 100vh; /* Fill the full browser height */
+  padding-left: 56px;
+  padding-right: 56px;
+  background-color: var(--white_a700);
+  background-image: url(../public/images/img_desktop_one.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden; /* Hide any excess if the image scales/crops */
+  @media only screen and (max-width: 1050px) {
+   // height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Background image that fills the screen */
+.bg-rectangle {
+ //   position: absolute;
+bottom: 0;
+left: 0;
+//width: 100%;
+//height: 100%;
+object-fit: scale-down;
+z-index: 0;
+height: 93%;
+ @media only screen and (max-width: 1050px) {
+ // height: auto;
+height: auto;
+}
+}
+
+
+.columnlayerone {
+  margin-top: 54px;
+  gap: var(--space-xs);
+  position: fixed;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+  @media only screen and (max-width: 1050px) {
+  //  width: 100%;
+  }
+}
+
+.layerone_one {
+  height: 56px;
+  width: 26%;
+  object-fit: contain;
+  @media only screen and (max-width: 1050px) {
+    width: 52%;
+  }
+}
+
+.stackallrights {
+  height: 870px;
+  align-self: stretch;
+  position: relative;
+  align-content: center;
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+  }
+}
+
+.rowallrights {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+  }
+}
+
+.allrights {
+  margin-bottom: 18px;
+  font-family: PPMonumentExtended-Light !important;
+  z-index: 1;
+  align-self: flex-end;
+  position: relative;
+}
+
+.image {
+  height: 870px;
+  margin-left: -304px;
+  position: relative;
+  width: 46%;
+  object-fit: contain;
+  @media only screen and (max-width: 1050px) {
+   // width: 100%;
+   // margin-left: 0px;
+  }
+}
+
+.rowweare {
+  gap: 48px;
+//  flex: 1;
+  display: flex;
+  align-items: center;
+  position: absolute;
+ top: 50%;
+ left: 50%;
+  height: max-content;
+ transform: translate(-50%, -50%); /* Perfect center alignment */
+
+ align-items: flex-start;
+ max-width: 90%; /* So it doesn’t overflow on small screens */
+  width: 100%;
+  padding: 70px 44px;
+  
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--white_a700);
+  border-radius: 30px;
+  //background: #FFFAFA;
+  
+  background-blend-mode: darken;
+  backdrop-filter: blur(10px);
+  @media only screen and (max-width: 1050px) {
+    text-align: center;               /* Center text inside */
+    flex-direction: column;
+  //  position: relative;
+  //  margin-left: 0px;
+  //  margin-right: 0px;
+   padding: 20px;
+  }
+}
+
+/* Footer pinned to the bottom, full width, centered text */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px 0;
+  /* If you want a slight background overlay (optional):
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff; 
+  */
+}
+
+
+.weare {
+  margin-bottom: 10px;
+  width: 48%;
+  line-height: 54px;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.columnsubscribe {
+  gap: var(--space-xs);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  @media only screen and (max-width: 1050px) {
+   // align-self: stretch;
+  }
+}
+
+.subscribeto {
+  font-family: PPMonumentExtended-Light !important;
+  line-height: 33px;
+}
+
+.columnemail {
+  margin-left: 6px;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media only screen and (max-width: 1050px) {
+ //   margin-left: 0px;
+  }
+}
+
+.email {
+  color: var(--gray_500) !important;
+  background-color: var(--blue_gray_100);
+  padding: 20px 34px 20px 28px;
+  @media only screen and (max-width: 550px) {
+  //  padding-left: 20px;
+  //  padding-right: 20px;
+  }
+}
+
+.sign_up {
+  color: var(--white_a700);
+  padding-left: 33px;
+  padding-right: 33px;
+  font-family: PPMonumentExtended-Light;
+  font-size: 24px;
+  font-weight: 300;
+  background-color: var(--blue_900);
+  align-self: stretch;
+  text-align: left;
+  height: 68px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--white_a700);
+  //margin: 0 auto;
+  @media only screen and (max-width: 1050px) {
+    font-size: 22px;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 550px) {
+   // padding-left: 20px;
+   // padding-right: 20px;
+  }
+}
+/* Example: Adjust heading size on smaller devices */
+@media (max-width: 600px) {
+  .weare.size-headingxs {
+    font-size: 24px;
+  }
+  
+  .subscribeto.size-textmd {
+    font-size: 14px;
+  }
+  
+  /* Adjust input width, button, etc. if needed */
+  #mce-EMAIL {
+    width: 100%;
+  }
+  .sign_up {
+    width: 100%;
+   // max-width: 200px;
+    margin: 0 auto;
+  }
+}
